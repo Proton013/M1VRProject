@@ -14,4 +14,4 @@
 
 ## Prerequisites
 
-Unity Version : `2019.4.17f`
+Unity Version : `2020.2.2f1`
