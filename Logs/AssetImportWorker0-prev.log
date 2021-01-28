@@ -1,0 +1,193 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 18363.1316; Version 1909; 64bit' Language: 'fr' Physical Memory: 32687 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Unity/Projects/VRProject
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+56992
+Successfully changed project path to: D:/Unity/Projects/VRProject
+D:/Unity/Projects/VRProject
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 35.43 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.74 ms.
+Initialize engine version: 2020.2.2f1 (068178b99f32)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity/Projects/VRProject/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f11)
+    Vendor:   
+    VRAM:     5980 MB
+    Driver:   27.21.14.6109
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56624
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001829 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 28.76 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.788 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001105 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.677 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 1630 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.9 MB.
+System memory in use after: 74.0 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2065.
+Total: 1.684100 ms (FindLiveObjects: 0.170900 ms CreateObjectMapping: 0.052300 ms MarkObjects: 1.381100 ms  DeleteObjects: 0.079000 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Left Hand Presence.prefab
+  artifactKey: Guid(7a867fc6bac12924c8c4bbb835d81ed6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Left Hand Presence.prefab using Guid(7a867fc6bac12924c8c4bbb835d81ed6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff73eb41b52 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff73eba9662 (Unity) ResolveArtifactV2
+0x00007ff73ec040ff (Unity) ImportToObjects
+0x00007ff73ec03353 (Unity) AssetImportWorker::Import
+0x00007ff73eb62f0a (Unity) <lambda_15460d5f4e3985824d32248de194be11>::operator()
+0x00007ff73ec2dd82 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff73ec2fee0 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff73ec3366e (Unity) asio::io_service::run
+0x00007ff73eba9ba0 (Unity) RunAssetImportWorkerClientV2
+0x00007ff73eba9bf0 (Unity) RunAssetImporterV2
+0x00007ff73e0c7ee6 (Unity) Application::InitializeProject
+0x00007ff73ea3d0b2 (Unity) WinMain
+0x00007ff7408a0c66 (Unity) __scrt_common_main_seh
+0x00007ff9c3aa7c24 (KERNEL32) BaseThreadInitThunk
+0x00007ff9c562d4d1 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(7a867fc6bac12924c8c4bbb835d81ed6) Importer(-1,00000000000000000000000000000000), Assets/Left Hand Presence.prefab from editor
+Resuming Guid(7a867fc6bac12924c8c4bbb835d81ed6) Importer(-1,00000000000000000000000000000000) -> a3507dad8c96134429a93e70d9e63c52 
+Assertion failed on expression: 'state.state == kUpToDate'
+
+Assertion failed on expression: 'state.artifactID == result'
+
+Assertion failed on expression: 'ins.second || ins.first->second == artifactID || (ins.first->second == CircularDependencyArtifactID() && !artifactID.IsValid()) || GetPathFromAssetGuidV2(key.GetGUID()).ends_with(".cs")'
+
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff73eb41b52 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff73eba9662 (Unity) ResolveArtifactV2
+0x00007ff73eba4261 (Unity) ProduceArtifactV2
+0x00007ff73eb1181e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff73eaf76d8 (Unity) PreviewImporter::GenerateAssetData
+0x00007ff73ec044bf (Unity) ImportToObjects
+0x00007ff73ec03353 (Unity) AssetImportWorker::Import
+0x00007ff73eb62f0a (Unity) <lambda_15460d5f4e3985824d32248de194be11>::operator()
+0x00007ff73ec2dd82 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff73ec2fee0 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff73ec3366e (Unity) asio::io_service::run
+0x00007ff73eba9ba0 (Unity) RunAssetImportWorkerClientV2
+0x00007ff73eba9bf0 (Unity) RunAssetImporterV2
+0x00007ff73e0c7ee6 (Unity) Application::InitializeProject
+0x00007ff73ea3d0b2 (Unity) WinMain
+0x00007ff7408a0c66 (Unity) __scrt_common_main_seh
+0x00007ff9c3aa7c24 (KERNEL32) BaseThreadInitThunk
+0x00007ff9c562d4d1 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(7a867fc6bac12924c8c4bbb835d81ed6) Importer(-1,00000000000000000000000000000000), Assets/Left Hand Presence.prefab from editor
+Resuming Guid(7a867fc6bac12924c8c4bbb835d81ed6) Importer(-1,00000000000000000000000000000000) -> a3507dad8c96134429a93e70d9e63c52 
+Assertion failed on expression: 'state.state == kUpToDate'
+
+Assertion failed on expression: 'state.artifactID == result'
+
+ -> (artifact id: '6d126e27298039bac8de1b13496082b1') in 0.567887 seconds
+  Import took 0.570380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000438 seconds.
+  path: Assets/Right Hand Presence.prefab
+  artifactKey: Guid(617f521242530e74abe9571aa4a18c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Right Hand Presence.prefab using Guid(617f521242530e74abe9571aa4a18c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
+0x00007ff73eb41b52 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff73eba9662 (Unity) ResolveArtifactV2
+0x00007ff73ec040ff (Unity) ImportToObjects
+0x00007ff73ec03353 (Unity) AssetImportWorker::Import
+0x00007ff73eb62f0a (Unity) <lambda_15460d5f4e3985824d32248de194be11>::operator()
+0x00007ff73ec2dd82 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff73ec2fee0 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff73ec3366e (Unity) asio::io_service::run
+0x00007ff73eba9ba0 (Unity) RunAssetImportWorkerClientV2
+0x00007ff73eba9bf0 (Unity) RunAssetImporterV2
+0x00007ff73e0c7ee6 (Unity) Application::InitializeProject
+0x00007ff73ea3d0b2 (Unity) WinMain
+0x00007ff7408a0c66 (Unity) __scrt_common_main_seh
+0x00007ff9c3aa7c24 (KERNEL32) BaseThreadInitThunk
+0x00007ff9c562d4d1 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(617f521242530e74abe9571aa4a18c35) Importer(-1,00000000000000000000000000000000), Assets/Right Hand Presence.prefab from editor
+Resuming Guid(617f521242530e74abe9571aa4a18c35) Importer(-1,00000000000000000000000000000000) -> 613223b6deed59d16624d050a9b7b390 
+Assertion failed on expression: 'state.state == kUpToDate'
+
+Assertion failed on expression: 'state.artifactID == result'
+
+Assertion failed on expression: 'ins.second || ins.first->second == artifactID || (ins.first->second == CircularDependencyArtifactID() && !artifactID.IsValid()) || GetPathFromAssetGuidV2(key.GetGUID()).ends_with(".cs")'
+
+Diagnostics callstack to track who triggered the sub-import:
+0x00007ff73eb41b52 (Unity) ImporterAssetResolver::ResolveAsset
+0x00007ff73eba9662 (Unity) ResolveArtifactV2
+0x00007ff73eba4261 (Unity) ProduceArtifactV2
+0x00007ff73eb1181e (Unity) AssetDatabase::ProduceArtifact
+0x00007ff73eaf76d8 (Unity) PreviewImporter::GenerateAssetData
+0x00007ff73ec044bf (Unity) ImportToObjects
+0x00007ff73ec03353 (Unity) AssetImportWorker::Import
+0x00007ff73eb62f0a (Unity) <lambda_15460d5f4e3985824d32248de194be11>::operator()
+0x00007ff73ec2dd82 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007ff73ec2fee0 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007ff73ec3366e (Unity) asio::io_service::run
+0x00007ff73eba9ba0 (Unity) RunAssetImportWorkerClientV2
+0x00007ff73eba9bf0 (Unity) RunAssetImporterV2
+0x00007ff73e0c7ee6 (Unity) Application::InitializeProject
+0x00007ff73ea3d0b2 (Unity) WinMain
+0x00007ff7408a0c66 (Unity) __scrt_common_main_seh
+0x00007ff9c3aa7c24 (KERNEL32) BaseThreadInitThunk
+0x00007ff9c562d4d1 (ntdll) RtlUserThreadStart
+
+Requesting import of Guid(617f521242530e74abe9571aa4a18c35) Importer(-1,00000000000000000000000000000000), Assets/Right Hand Presence.prefab from editor
+Resuming Guid(617f521242530e74abe9571aa4a18c35) Importer(-1,00000000000000000000000000000000) -> 613223b6deed59d16624d050a9b7b390 
+Assertion failed on expression: 'state.state == kUpToDate'
+
+Assertion failed on expression: 'state.artifactID == result'
+
+ -> (artifact id: '0f038592c64a1d3cd313014c035840e1') in 0.007639 seconds
+  Import took 0.009787 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
