@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
 using UnityEngine;
 
 public class TargetSpawnerController : MonoBehaviour
@@ -7,6 +8,7 @@ public class TargetSpawnerController : MonoBehaviour
     [SerializeField] private Transform previousLevel = default;
     [SerializeField] private Transform currentLevel = default;
     [SerializeField] private GameObject targetPrefab = default;
+    [SerializeField] private Transform ProjectileParent = default;
     
     private bool _hasSpawn = false;
     private float _targetHeight;
@@ -14,10 +16,11 @@ public class TargetSpawnerController : MonoBehaviour
 
     private void Awake()
     {
-        _targetHeight = targetPrefab.GetComponent<Renderer>().bounds.size.y;
-        
-        GameObject empty = new GameObject();
-        empty.name = "Tmp";
+        EndLevel.CurrentLevel = currentLevel;
+        EndLevel.ProjectileParent = ProjectileParent;
+        _targetHeight = targetPrefab.GetComponentInChildren<Renderer>().bounds.size.y;
+
+        GameObject empty = new GameObject {name = "Tmp"};
         empty.transform.parent = currentLevel;
     }
     
@@ -27,22 +30,25 @@ public class TargetSpawnerController : MonoBehaviour
         {
             LevelSpawns();
         }
+
+        EndLevel.CheckEnd(_hasSpawn);
     }
 
     private void LevelSpawns()
     {   // fixed targets (not moving)
         Vector3 position = new Vector3(-8.5f, _targetHeight/2 + 0.01f, 0);
         GameObject clone = Instantiate(targetPrefab, position, _rotation, currentLevel);
-        clone.AddComponent<Rigidbody>(); clone.AddComponent<BoxCollider>();
+        clone.layer = LayerMask.NameToLayer("Target");
         
         position = new Vector3(-5f, _targetHeight/2 + 0.01f, 2);
         clone = Instantiate(targetPrefab, position, _rotation, currentLevel);
-        clone.AddComponent<Rigidbody>(); clone.AddComponent<BoxCollider>();
+        clone.layer = LayerMask.NameToLayer("Target");
         
         position = new Vector3(-5f, _targetHeight/2 + 0.01f, -2);
         clone = Instantiate(targetPrefab, position, _rotation, currentLevel);
-        clone.AddComponent<Rigidbody>(); clone.AddComponent<BoxCollider>();
+        clone.layer = LayerMask.NameToLayer("Target");
 
         _hasSpawn = true;
     }
+    
 }

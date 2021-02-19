@@ -23,6 +23,7 @@ public class TargetSpawnerControllerLevel3 : MonoBehaviour
 
     private void Awake()
     {
+        EndLevel.CurrentLevel = currentLevel;
         _targetHeight = targetPrefab.GetComponent<Renderer>().bounds.size.y;
         
         GameObject empty = new GameObject();
@@ -37,6 +38,8 @@ public class TargetSpawnerControllerLevel3 : MonoBehaviour
         
         if (currentLevel.childCount > 1)
             MovingTargets();
+
+        EndLevel.CheckEnd(_hasSpawn);
     }
 
     private void LevelSpawns()
@@ -44,15 +47,15 @@ public class TargetSpawnerControllerLevel3 : MonoBehaviour
         // All moving
         Vector3 position = new Vector3(-8, _targetHeight/2 + 0.01f, -2);
         _movingTargetBack = Instantiate(targetPrefab, position, _rotation, currentLevel);
-        _movingTargetBack.AddComponent<Rigidbody>(); _movingTargetBack.AddComponent<BoxCollider>();
+        _movingTargetBack.layer = LayerMask.NameToLayer("Target");
         
         position = new Vector3(-4, _targetHeight/2 + 0.01f, 2);
         _movingTargetMid = Instantiate(targetPrefab, position, _rotation, currentLevel);
-        _movingTargetMid.AddComponent<Rigidbody>(); _movingTargetMid.AddComponent<BoxCollider>();
+        _movingTargetMid.layer = LayerMask.NameToLayer("Target");
         
         position = new Vector3(0, _targetHeight/2 + 0.01f, 0);
         _movingTargetFront = Instantiate(targetPrefab, position, _rotation, currentLevel);
-        _movingTargetFront.AddComponent<Rigidbody>(); _movingTargetFront.AddComponent<BoxCollider>();
+        _movingTargetFront.layer = LayerMask.NameToLayer("Target");
         
         _hasSpawn = true;
     }
@@ -94,4 +97,5 @@ public class TargetSpawnerControllerLevel3 : MonoBehaviour
         _movingTargetMid.transform.position = mid;
         _movingTargetFront.transform.position = front;
     }
+    
 }

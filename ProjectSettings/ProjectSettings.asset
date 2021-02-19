@@ -131,8 +131,6 @@ PlayerSettings:
   preloadedAssets:
   - {fileID: 11400000, guid: f52c787d4e75dff42b61f54e896161ec, type: 2}
   - {fileID: -785756999047052721, guid: 64e139f3d1e4ff14f90bb0fdb74ed08d, type: 2}
-  - {fileID: 0}
-  - {fileID: 8173660246032510196, guid: 4eee7e7583a94d04ca452ec85f3dc466, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -665,7 +663,7 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 1
+  activeInputHandler: 2
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
