@@ -23,9 +23,8 @@ public class TargetSpawnerControllerLevel2 : MonoBehaviour
     {
         EndLevel.CurrentLevel = currentLevel;
         _targetHeight = targetPrefab.GetComponent<Renderer>().bounds.size.y;
-        
-        GameObject empty = new GameObject();
-        empty.name = "Tmp";
+
+        GameObject empty = new GameObject {name = "Tmp"};
         empty.transform.parent = currentLevel;
     }
     
@@ -33,9 +32,15 @@ public class TargetSpawnerControllerLevel2 : MonoBehaviour
     {
         if (previousLevel.childCount == 0 && _hasSpawn == false)
             LevelSpawns();
-        
+
         if (currentLevel.childCount > 1)
-            MovingTargets();
+        {
+            if (_movingTargetRight != null) 
+                MovingTargets(ref _movingTargetRight, ref _rightIsGoingUp);
+            
+            if (_movingTargetLeft != null) 
+                MovingTargets(ref _movingTargetLeft, ref _leftIsGoingUp);
+        }
         
         EndLevel.CheckEnd(_hasSpawn);
     }
@@ -59,32 +64,22 @@ public class TargetSpawnerControllerLevel2 : MonoBehaviour
         _hasSpawn = true;
     }
     
-    private void MovingTargets()
+    private void MovingTargets(ref GameObject target, ref bool isGoingUp)
     {
-        Vector3 right = _movingTargetRight.transform.position;
-        Vector3 left = _movingTargetLeft.transform.position;
+        Vector3 pos = target.transform.position;
 
         // Limits verification
-        if (right.x <= -7) _rightIsGoingUp = true;
-        else if (right.x >= 0) _rightIsGoingUp = false;
-        
-        if (left.x <= -7) _leftIsGoingUp = true;
-        else if (left.x >= 0) _leftIsGoingUp = false;
+        if (pos.x <= -7f) isGoingUp = true;
+        else if (pos.x >= 0f) isGoingUp = false;
         
         // Movement handling
-        if (right.x < 0 && _rightIsGoingUp == true)
-            right.Set(right.x + _speed * Time.deltaTime, right.y, right.z);
-        else if (right.x > -7 && _rightIsGoingUp == false)
-            right.Set(right.x - _speed * Time.deltaTime, right.y, right.z);
-
-        if (left.x < 0 && _leftIsGoingUp == true)
-            left.Set(left.x + _speed * Time.deltaTime, left.y, left.z);
-        else if (left.x > -7 && _leftIsGoingUp == false)
-            left.Set(left.x - _speed * Time.deltaTime, left.y, left.z);
+        if (pos.x < 0f && isGoingUp == true)
+            pos.Set(pos.x + _speed * Time.deltaTime, pos.y, pos.z);
+        else if (pos.x > -7f && isGoingUp == false)
+            pos.Set(pos.x - _speed * Time.deltaTime, pos.y, pos.z);
         
         // Assignation to reference
-        _movingTargetRight.transform.position = right;
-        _movingTargetLeft.transform.position = left;
+        target.transform.position = pos;
     }
     
 }

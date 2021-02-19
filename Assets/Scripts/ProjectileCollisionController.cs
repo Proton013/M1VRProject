@@ -13,7 +13,7 @@ public class ProjectileCollisionController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Target"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Target") && _projectileTransform.gameObject.layer == LayerMask.NameToLayer("Projectile"))
         {
             _projectileTransform.gameObject.layer = LayerMask.NameToLayer("Default");
             TargetHitController hitTarget = other.gameObject.GetComponent<TargetHitController>();

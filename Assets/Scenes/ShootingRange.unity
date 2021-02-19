@@ -2115,6 +2115,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2205,6 +2206,39 @@ MonoBehaviour:
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 0
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a78da3f00f3328541b4526c0b0b5ec5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineThickness: 1.25
+  lineIntensity: 0.5
+  fillAmount: 0.2
+  lineColor0: {r: 1, g: 0, b: 0, a: 1}
+  lineColor1: {r: 0, g: 1, b: 0, a: 1}
+  lineColor2: {r: 0, g: 0, b: 1, a: 1}
+  additiveRendering: 0
+  backfaceCulling: 1
+  fillColor: {r: 0, g: 0, b: 1, a: 1}
+  useFillColor: 0
+  cornerOutlines: 0
+  addLinesBetweenColors: 0
+  scaleWithScreenSize: 1
+  alphaCutoff: 0.5
+  flipY: 0
+  sourceCamera: {fileID: 0}
+  autoEnableOutlines: 0
+  outlineCamera: {fileID: 0}
+  outlineShaderMaterial: {fileID: 0}
+  renderTexture: {fileID: 0}
+  extraRenderTexture: {fileID: 0}
 --- !u!1 &1059645918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3142,39 +3176,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d46d56d88c6f294db6125df88060b6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.226
+      value: -2.226665
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d46d56d88c6f294db6125df88060b6f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.42
+      value: 2.3993187
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d46d56d88c6f294db6125df88060b6f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.925
+      value: 1.9250232
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d46d56d88c6f294db6125df88060b6f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071037
+      value: 0.70579046
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d46d56d88c6f294db6125df88060b6f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7067573
+      value: -0.7068557
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d46d56d88c6f294db6125df88060b6f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0020697503
+      value: 0.043125127
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d46d56d88c6f294db6125df88060b6f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.022229897
+      value: -0.018846361
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d46d56d88c6f294db6125df88060b6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -88.366
+      value: -95.024
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d46d56d88c6f294db6125df88060b6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -88.031
+      value: -88.031006
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d46d56d88c6f294db6125df88060b6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

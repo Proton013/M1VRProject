@@ -35,9 +35,16 @@ public class TargetSpawnerControllerLevel3 : MonoBehaviour
     {
         if (previousLevel.childCount == 0 && _hasSpawn == false)
             LevelSpawns();
-        
+
         if (currentLevel.childCount > 1)
-            MovingTargets();
+        {
+            if (_movingTargetBack != null) 
+                MovingTargets(ref _movingTargetBack, ref _backIsGoingPos);
+            if (_movingTargetMid != null) 
+                MovingTargets(ref _movingTargetMid, ref _midIsGoingPos);
+            if (_movingTargetFront != null) 
+                MovingTargets(ref _movingTargetFront, ref _frontIsGoingPos);
+        }
 
         EndLevel.CheckEnd(_hasSpawn);
     }
@@ -60,42 +67,22 @@ public class TargetSpawnerControllerLevel3 : MonoBehaviour
         _hasSpawn = true;
     }
     
-    private void MovingTargets()
+    private void MovingTargets(ref GameObject target, ref bool isGoingUp)
     {
-        Vector3 back = _movingTargetBack.transform.position;
-        Vector3 mid = _movingTargetMid.transform.position;
-        Vector3 front = _movingTargetFront.transform.position;
+        Vector3 pos = target.transform.position;
 
         // Limits verification
-        if (back.z <= -2) _backIsGoingPos = true;
-        else if (back.z >= 2) _backIsGoingPos = false;
-        
-        if (mid.z <= -2) _midIsGoingPos = true;
-        else if (mid.z >= 2) _midIsGoingPos = false;
-        
-        if (front.z <= -2) _frontIsGoingPos = true;
-        else if (front.z >= 2) _frontIsGoingPos = false;
+        if (pos.z <= -2) isGoingUp = true;
+        else if (pos.z >= 2) isGoingUp = false;
         
         // Movement handling
-        if (back.z < 2 && _backIsGoingPos)
-            back.Set(back.x, back.y, back.z + _speed * Time.deltaTime);
-        else if (back.z > -2 && !_backIsGoingPos)
-            back.Set(back.x, back.y, back.z - _speed * Time.deltaTime);
-
-        if (mid.z < 2 && _midIsGoingPos)
-            mid.Set(mid.x, mid.y, mid.z + _speed * Time.deltaTime);
-        else if (mid.z > -2 && !_midIsGoingPos)
-            mid.Set(mid.x, mid.y, mid.z - _speed * Time.deltaTime);
-        
-        if (front.z < 2 && _frontIsGoingPos)
-            front.Set(front.x, front.y, front.z + _speed * Time.deltaTime);
-        else if (front.z > -2 && !_frontIsGoingPos)
-            front.Set(front.x, front.y, front.z - _speed * Time.deltaTime);
+        if (pos.z < 2 && isGoingUp)
+            pos.Set(pos.x, pos.y, pos.z + _speed * Time.deltaTime);
+        else if (pos.z > -2 && !isGoingUp)
+            pos.Set(pos.x, pos.y, pos.z - _speed * Time.deltaTime);
         
         // Assignation to reference
-        _movingTargetBack.transform.position = back;
-        _movingTargetMid.transform.position = mid;
-        _movingTargetFront.transform.position = front;
+        _movingTargetBack.transform.position = pos;
     }
     
 }
