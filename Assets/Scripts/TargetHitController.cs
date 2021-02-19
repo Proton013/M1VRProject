@@ -1,35 +1,22 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Object = UnityEngine.Object;
 
 public class TargetHitController : MonoBehaviour
 {
-    private Transform _target;
-    
-    [SerializeField] private int lifespan = 4;
-    
-    void Start()
-    {
-        _target = transform;
-    }
+    [SerializeField] private int lifespan;
 
-    
-    void Update()
+    public void TakeDamage()
     {
+        // red effect
+        Renderer renderer = gameObject.GetComponent<Renderer>();
+        renderer.material.color = Color.red;
+        
+        lifespan--;
         if (lifespan <= 0)
         {
-            // TODO : add effect
-            GameObject.Destroy(_target.gameObject);
+            Object.Destroy(transform.gameObject);
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        if (other.gameObject.layer == LayerMask.NameToLayer("Projectile"))
-        {
-            // TODO : add effect on hit (ex : red filter material)
-            lifespan--;
-            other.gameObject.layer = default; // used projectile won't hit (-1HP) on touch
-        } 
     }
 }

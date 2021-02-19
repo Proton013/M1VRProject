@@ -11,16 +11,13 @@ public class ProjectileCollisionController : MonoBehaviour
         _projectileRigidbody = GetComponent<Rigidbody>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("ooo   ooo   ooo");
         if (other.gameObject.layer == LayerMask.NameToLayer("Target"))
         {
-            // disappear after adding force to other
-            
-            _projectileRigidbody.isKinematic = true;
-            // _projectileRigidbody.detectCollisions = false;
-            _projectileTransform.parent = other.transform;
+            _projectileTransform.gameObject.layer = LayerMask.NameToLayer("Default");
+            TargetHitController hitTarget = other.gameObject.GetComponent<TargetHitController>();
+            hitTarget.TakeDamage();
         }
     }
 }
