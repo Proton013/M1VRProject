@@ -7,7 +7,8 @@ public class TargetSpawnerControllerLevel2 : MonoBehaviour
     [SerializeField] private Transform previousLevel = default;
     [SerializeField] private Transform currentLevel = default;
     [SerializeField] private GameObject targetPrefab = default;
-    
+
+    private bool _updatedEndLevel = false;
     private bool _hasSpawn = false;
     private float _targetHeight;
     private Quaternion _rotation = Quaternion.Euler(-90, 0, 0); // adjust rotation from blender
@@ -21,7 +22,6 @@ public class TargetSpawnerControllerLevel2 : MonoBehaviour
 
     private void Awake()
     {
-        EndLevel.CurrentLevel = currentLevel;
         _targetHeight = targetPrefab.GetComponent<Renderer>().bounds.size.y;
 
         GameObject empty = new GameObject {name = "Tmp"};
@@ -42,7 +42,10 @@ public class TargetSpawnerControllerLevel2 : MonoBehaviour
                 MovingTargets(ref _movingTargetLeft, ref _leftIsGoingUp);
         }
         
-        EndLevel.CheckEnd(_hasSpawn);
+        if (!_updatedEndLevel && _hasSpawn) 
+            EndLevel.CurrentLevel = currentLevel;
+        else
+            EndLevel.CheckEnd(_hasSpawn);
     }
 
     private void LevelSpawns()

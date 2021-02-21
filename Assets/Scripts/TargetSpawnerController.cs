@@ -30,7 +30,7 @@ public class TargetSpawnerController : MonoBehaviour
         {
             LevelSpawns();
         }
-
+        
         EndLevel.CheckEnd(_hasSpawn);
     }
 
