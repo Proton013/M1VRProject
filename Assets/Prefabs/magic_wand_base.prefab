@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 1203253161203631493}
   - component: {fileID: 1203253161203631492}
   - component: {fileID: 1203253161203631489}
+  - component: {fileID: 8714983867104027434}
   - component: {fileID: 1203253161203631488}
   m_Layer: 0
   m_Name: magic_wand_base
@@ -308,6 +309,23 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
+--- !u!114 &8714983867104027434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050186428300804027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6536bf2fab402da4e97430357ca06449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 0}
+  projectileParent: {fileID: 0}
+  tip: {fileID: 0}
+  projectileOrigin: {fileID: 0}
+  speedModifier: 1200
 --- !u!114 &1203253161203631488
 MonoBehaviour:
   m_ObjectHideFlags: 0

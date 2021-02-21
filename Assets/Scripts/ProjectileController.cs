@@ -8,7 +8,7 @@ public class ProjectileController : MonoBehaviour
     [SerializeField] private Transform projectileParent = default;
     [SerializeField] private GameObject tip = default;
     
-    [SerializeField] private Transform projectileOrigin; // Typically, player torso or shoulder
+    // [SerializeField] private Transform projectileOrigin; // Typically, player torso or shoulder
     // if head : other process (meeting point between head ray and wand ray)
     [SerializeField] private float speedModifier = 1200;
     
