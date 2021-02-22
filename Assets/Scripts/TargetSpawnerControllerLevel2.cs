@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TargetSpawnerControllerLevel2 : MonoBehaviour
@@ -8,7 +6,7 @@ public class TargetSpawnerControllerLevel2 : MonoBehaviour
     [SerializeField] private Transform currentLevel = default;
     [SerializeField] private GameObject targetPrefab = default;
 
-    private bool _updatedEndLevel = false;
+    // private bool _updatedEndLevel = false;
     private bool _hasSpawn = false;
     private float _targetHeight;
     private Quaternion _rotation = Quaternion.Euler(-90, 0, 0); // adjust rotation from blender
@@ -42,10 +40,11 @@ public class TargetSpawnerControllerLevel2 : MonoBehaviour
                 MovingTargets(ref _movingTargetLeft, ref _leftIsGoingUp);
         }
         
-        if (!_updatedEndLevel && _hasSpawn) 
+        if (_hasSpawn)
+        {
             EndLevel.CurrentLevel = currentLevel;
-        else
             EndLevel.CheckEnd(_hasSpawn);
+        }
     }
 
     private void LevelSpawns()

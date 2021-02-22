@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public static class EndLevel
@@ -9,7 +7,6 @@ public static class EndLevel
 
     public static void CheckEnd(bool hasSpawn)
     {
-        Debug.Log("name : " + CurrentLevel.name + " child count : " + CurrentLevel.childCount);
         // only Tmp object remaining, ready to go to next level
         if (hasSpawn && CurrentLevel.childCount == 1)
         {

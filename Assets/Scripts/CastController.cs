@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem.LowLevel;
 
 public class CastController : MonoBehaviour
 {
@@ -52,12 +47,13 @@ public class CastController : MonoBehaviour
             _count = 0f;
             _isFastEnough = false;
         }
-        
+        /*
         // Debug input
         if (Input.GetKeyDown("space"))
         {
             projectileController.SpawnProjectiles();
         }
+        */
     }
     
     // instantaneous velocity

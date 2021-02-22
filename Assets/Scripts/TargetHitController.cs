@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
 
 public class TargetHitController : MonoBehaviour
@@ -9,14 +7,14 @@ public class TargetHitController : MonoBehaviour
 
     private Renderer _targetRenderer;
     private Color _defaultColor;
-    private Outline _outline;
+    // private Outline _outline;
     private float _colorCount = 0f;
     private bool _hasTakenDamage = false;
 
     private void Start()
     {
         _targetRenderer = gameObject.transform.GetChild(0).GetComponent<Renderer>();
-        _outline = gameObject.transform.GetChild(0).GetComponent<Outline>();
+        // _outline = gameObject.transform.GetChild(0).GetComponent<Outline>();
 
         _defaultColor = _targetRenderer.material.color;
     }
@@ -27,7 +25,7 @@ public class TargetHitController : MonoBehaviour
         {
             _targetRenderer.material.color = _defaultColor;
             _hasTakenDamage = false;
-            _outline.OutlineWidth = 0f;
+            // _outline.OutlineWidth = 0f;
 
         }
         if (_hasTakenDamage) _colorCount += Time.deltaTime;
@@ -39,7 +37,7 @@ public class TargetHitController : MonoBehaviour
         _hasTakenDamage = true;
         _colorCount = 0f;
         _targetRenderer.material.color = Color.red;
-        _outline.OutlineWidth = 10f;
+        // _outline.OutlineWidth = 10f;
         
         
         lifespan--;
