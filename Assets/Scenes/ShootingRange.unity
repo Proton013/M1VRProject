@@ -1448,6 +1448,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: blue_magic_wand_base
       objectReference: {fileID: 0}
+    - target: {fileID: 1790332990874523793, guid: 3cd5aed50e6ff384c92ac7ff9f8948c4, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1790332990874523795, guid: 3cd5aed50e6ff384c92ac7ff9f8948c4, type: 3}
       propertyPath: projectileController
       value: 
@@ -1835,6 +1839,10 @@ PrefabInstance:
     - target: {fileID: 6031683530384361959, guid: b9aa6a1e59fff64449d3b6486a150320, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 124.622
+      objectReference: {fileID: 0}
+    - target: {fileID: 6070396325156399460, guid: b9aa6a1e59fff64449d3b6486a150320, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6070396325156399462, guid: b9aa6a1e59fff64449d3b6486a150320, type: 3}
       propertyPath: projectileController
@@ -3539,6 +3547,10 @@ PrefabInstance:
       propertyPath: projectileController
       value: 
       objectReference: {fileID: 2133755943}
+    - target: {fileID: 6807404869911121358, guid: ced3ed2b2d5cb0c47ac09cf8fed66b24, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced3ed2b2d5cb0c47ac09cf8fed66b24, type: 3}
 --- !u!4 &2133755941 stripped
